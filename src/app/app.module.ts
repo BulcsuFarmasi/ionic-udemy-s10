@@ -16,7 +16,15 @@ import { UsersPage } from '../pages/users/users';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      backButtonText: 'Move Back',
+      iconMode: 'ios',
+      platforms: {
+        ios: {
+          backButtonText:'Back'
+        }
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -14,7 +14,7 @@ export class UsersPage {
   ionViewWillEnter () {
     //this.navbar.setBackButtonText('Home');
     //this.navbar.hideBackButton = true;
-    this.viewController.setBackButtonText('Home');
+    //this.viewController.setBackButtonText('Home');
     //this.viewController.showBackButton(false);
   }
 }

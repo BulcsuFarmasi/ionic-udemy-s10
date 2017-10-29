@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { Navbar } from 'ionic-angular';
+import { Navbar, ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'page-users',
@@ -9,8 +9,12 @@ import { Navbar } from 'ionic-angular';
 export class UsersPage {
   @ViewChild(Navbar) navbar:Navbar;
 
+  constructor (private viewController:ViewController) {}
+
   ionViewWillEnter () {
-    this.navbar.setBackButtonText('Home');
+    //this.navbar.setBackButtonText('Home');
     //this.navbar.hideBackButton = true;
+    this.viewController.setBackButtonText('Home');
+    //this.viewController.showBackButton(false);
   }
 }

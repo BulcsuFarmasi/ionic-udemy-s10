@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
 
 import { UsersPage } from '../users/users'
 
@@ -10,8 +10,11 @@ import { UsersPage } from '../users/users'
 export class HomePage {
   usersPage = UsersPage;
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, private platform:Platform) {
+      console.log(this.platform.platforms());
+      if (this.platform.is('ios')) {
+        // Only executed on iOS
+      }
   }
 
 }

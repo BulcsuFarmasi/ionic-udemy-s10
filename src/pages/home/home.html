@@ -8,4 +8,7 @@
 
 <ion-content padding>
   <button ion-button [navPush]="usersPage">To Users</button>
+  <p *ngIf="platform.is('ios')">iOS</p>
+  <p *ngIf="platform.is('iphone')">iPhone</p>
+  <p *ngIf="platform.is('android')">Android</p>
 </ion-content>

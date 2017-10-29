@@ -15,6 +15,10 @@ export class HomePage {
       if (this.platform.is('ios')) {
         // Only executed on iOS
       }
+      console.log(this.platform.height());
+      console.log(this.platform.width());
+      console.log(this.platform.isLandscape());
+      console.log(this.platform.isPortrait());
   }
 
 }
